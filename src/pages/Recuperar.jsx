@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Input } from "../components/Input";
 import { useNavigate } from "react-router-dom";
+import ButtonGroup from "../components/ButtonGroup";
+
 
 const Recuperar = () => {
   const [email, setEmail] = useState("");
@@ -30,10 +32,10 @@ const Recuperar = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <div style={{ display: "flex", justifyContent: "space-between", marginTop: "16px" }}>
+          <ButtonGroup>
             <button type="button" className="login-button" onClick={() => navigate("/")}>Cancelar</button>
             <button type="submit" className="login-button">Recuperar</button>
-          </div>
+          </ButtonGroup>
         </form>
       </div>
     </div>

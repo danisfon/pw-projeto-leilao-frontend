@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Input } from "../components/Input";
 import { useAuth } from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
+import ButtonGroup from "../components/ButtonGroup";
+
 
 const Cadastro = () => {
   const [name, setName] = useState("");
@@ -48,10 +50,10 @@ const Cadastro = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <div style={{ display: "flex", justifyContent: "space-between", marginTop: "16px" }}>
-            <button type="button" className="login-button" onClick={() => navigate("/")}>Cancelar</button>
-            <button type="submit" className="login-button">Cadastrar</button>
-          </div>
+          <ButtonGroup>
+          <button type="button" className="login-button" onClick={() => navigate("/")}>Cancelar</button>
+          <button type="submit" className="login-button">Cadastrar</button>
+        </ButtonGroup>
         </form>
       </div>
     </div>

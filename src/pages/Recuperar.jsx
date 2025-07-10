@@ -1,0 +1,43 @@
+import React, { useState } from "react";
+import { Input } from "../components/Input";
+import { useNavigate } from "react-router-dom";
+
+const Recuperar = () => {
+  const [email, setEmail] = useState("");
+  const [mensagem, setMensagem] = useState(null);
+  const navigate = useNavigate();
+
+  const handleRecuperar = (e) => {
+    e.preventDefault();
+    const usuarios = JSON.parse(localStorage.getItem("fakeUsers")) || [];
+    const existe = usuarios.find((u) => u.email === email);
+    if (existe) {
+      setMensagem("Um link de recuperação foi enviado para seu e-mail.");
+    } else {
+      setMensagem("E-mail não encontrado.");
+    }
+  };
+
+  return (
+    <div className="login-container">
+      <div className="login-box">
+        <h1 className="login-title">Recuperar Senha</h1>
+        {mensagem && <p className="error">{mensagem}</p>}
+        <form onSubmit={handleRecuperar}>
+          <Input
+            label="E-mail"
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <div style={{ display: "flex", justifyContent: "space-between", marginTop: "16px" }}>
+            <button type="button" className="login-button" onClick={() => navigate("/")}>Cancelar</button>
+            <button type="submit" className="login-button">Recuperar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Recuperar;

@@ -45,10 +45,10 @@ const Login = () => {
         <div className="login-links">
           <p>
             Não tem conta?{' '}
-            <a href="#">Cadastrar-se</a>
+            <a href="/cadastro">Cadastrar-se</a>
           </p>
           <p>
-            <a href="#">Recuperar senha</a>
+            <a href="/recuperar">Recuperar senha</a>
           </p>
         </div>
       </div>

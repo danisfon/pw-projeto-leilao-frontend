@@ -1,7 +1,7 @@
 export const fakeUsers = [
   {
-    email: "dani",
-    password: "123",
+    email: "daniele@gmail.com",
+    password: "!1Daniele",
     name: "Daniele"
   },
 ];

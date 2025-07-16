@@ -80,9 +80,10 @@ body {
 }
 
 .error {
-  color: #c31212;
-  font-size: 14px;
+  color: #dbdbdb;
+  font-size: 18px;
   margin-bottom: 12px;
+  font-weight: bold;
 }
 
 .dashboard {

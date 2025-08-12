@@ -1,47 +1,53 @@
 import React, { useState } from "react";
 import { Input } from "../components/Input";
-import { useAuth } from "../hooks/useAuth";
+import AutenticacaoService from "../service/AutenticacaoService";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const { login } = useAuth();
-  const navigate = useNavigate();
-  const [error, setError] = useState(null);
+  const navigate = useNavigate();  // Hook para navegação
+  const autenticacao = new AutenticacaoService();
+  const [usuario, setUsuario] = useState({ email: '', senha: '' });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const user = login(email, password);
-    if (user) {
-      navigate("/dashboard");
-    } else {
-      setError("Usuário ou senha inválidos");
-    }
-  };
+  const handleChange = (e) => {
+    setUsuario({ ...usuario, [e.target.name]: e.target.value })
+  }
+
+  // const login = async () => {
+  //   try {
+  //     const resposta = await autenticacao.login(usuario);
+  //     if (resposta && resposta.data && resposta.status === 200 && resposta.data.token) {
+  //       localStorage.setItem('usuario', JSON.stringify(resposta.data));
+  //       navigate("/dashboard");  // Usando o hook para navegação
+  //     } else {
+  //       alert("erro ao fazer login")
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //     alert(error.response ? error.response.data.mensagem : "Erro desconhecido");
+  //   }
+  // }
 
   return (
     <div className="login-container">
       <div className="login-box">
         <h1 className="login-title">Acesso ao Leilão</h1>
-        {error && <p className="error">{error}</p>}
-        <form onSubmit={handleSubmit}>
           <Input
             label="Email"
             type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={usuario.email}
+            onChange={handleChange}
+            name="email"
           />
           <Input
             label="Senha"
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={usuario.senha}
+            onChange={handleChange}
+            name="senha"
           />
-          <button type="submit" className="login-button">
+          <button type="submit" className="login-button" onClick={login}>
             Acessar
           </button>
-        </form>
         <div className="login-links">
           <p>
             Não tem conta?{' '}

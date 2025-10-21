@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Input = ({ label, type, value, onChange, name }) => (
+export const Input = ({ label, type, value, onChange }) => (
   <div className="input-group">
     <label>{label}</label>
     <input
@@ -8,7 +8,6 @@ export const Input = ({ label, type, value, onChange, name }) => (
       value={value}
       onChange={onChange}
       className="input"
-      name={name}
     />
   </div>
-);  
+);

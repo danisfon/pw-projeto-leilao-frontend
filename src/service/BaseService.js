@@ -1,32 +1,30 @@
 import api from "../configs/axiosConfig";
 
-class BaseService {
+class BaseService{
 
     constructor(endPoint){
-        this.endPoint = endPoint;
-        this.api = api;
+            this.endPoint = endPoint;
+            this.api = api;
     }
 
-    async inserir(dados) {
-        const resposta = await this.api.post(this.endPoint, dados)
+    async inserir(dados){
+        const resposta = await this.api.post(this.endPoint, dados);
         return resposta;
     }
 
-    async alterar(dados) {
-        const resposta = await this.api.put(this.endPoint, dados)
+    async alterar(dados){
+        const resposta = await this.api.put(this.endPoint, dados);
         return resposta;
     }
 
-    async excluir(id) {
-        const resposta = await this.api.delete(`${this.endPoint}/${id}`)
+    async excluir(id){
+        const resposta = await this.api.delete(`${this.endpoint}/${id}`);
         return resposta;
     }
 
-    async buscartodos() {
-        const resposta = await this.api.get(this.endPoint)
+    async buscarTodos(){
+        const resposta = await this.api.get(this.endPoint);
         return resposta;
     }
 }
-
-
 export default BaseService;

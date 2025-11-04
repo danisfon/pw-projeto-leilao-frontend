@@ -14,14 +14,14 @@ const Leiloes = () => {
 
   useEffect(() => {
     // Buscar leilões
-    axios.get("http://localhost:8080/leiloes")
+    axios.get("http://localhost:8090/leiloes")
       .then(response => setLeiloes(response.data.content))
       .catch(() => {
         setLeiloes(mockLeiloes);
       });
 
     // Buscar categorias da API
-    axios.get("http://localhost:8080/categoria?size=100")
+    axios.get("http://localhost:8090/categoria?size=100")
       .then(response => {
         const categoriasAPI = response.data.content || [];
         setCategorias(categoriasAPI);

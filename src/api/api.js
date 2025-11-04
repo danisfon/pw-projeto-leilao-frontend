@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Aqui você define a URL base do seu backend de leilão
 // Pode ser via variável de ambiente ou diretamente:
-const API_URL = process.env.REACT_APP_URL_BACK_END || "http://localhost:8080";
+const API_URL = process.env.REACT_APP_URL_BACK_END || "http://localhost:8090";
 
 const api = axios.create({
   baseURL: API_URL,

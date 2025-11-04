@@ -25,4 +25,4 @@ const AdminVeiculos = () => {
   );
 };
 
-export default AdminVeiculos;s
+export default AdminVeiculos;

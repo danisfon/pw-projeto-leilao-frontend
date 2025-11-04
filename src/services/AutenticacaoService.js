@@ -4,7 +4,7 @@ import axios from "axios";
 export default class AutenticacaoService {
   async login(email, senha) {
     try {
-      const response = await axios.post("http://localhost:8080/autenticacao/login", {
+      const response = await axios.post("http://localhost:8090/autenticacao/login", {
         email,
         senha,
       });
@@ -17,7 +17,7 @@ export default class AutenticacaoService {
 
   async register(nome, email, senha) {
     try {
-      const response = await axios.post("http://localhost:8080/pessoa", {
+      const response = await axios.post("http://localhost:8090/pessoa", {
         nome,
         email,
         senha,

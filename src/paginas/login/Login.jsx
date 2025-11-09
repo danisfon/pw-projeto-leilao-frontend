@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 import { Input } from "../../components/Input"; // Ajuste o path conforme sua estrutura
 import { useNavigate } from "react-router-dom";
-import marteloLeilao from "../../assets/leilao-martelo.png"; // Ajuste o path conforme sua estrutura
-import carroLeilao from "../../assets/carro.png"; // Ajuste o path conforme sua estrutura
+import joiaPrata from "../../assets/joia_prata.jpg"; // Ajuste o path conforme sua estrutura
 import AutenticacaoService from "../../services/AutenticacaoService"; // Ajuste o path conforme sua estrutura
 import "./login.css"; // Importando o CSS específico para esta página
 
@@ -38,21 +37,17 @@ const Login = () => {
     }
   };
 
-  const handleCadastroClick = () => {
-    navigate("/cadastro");
-  };
-
   return (
     <div className="login-container">
       <div className="login-image-wrapper">
-        <img src={carroLeilao} alt="Martelo de Leilão" className="login-image" />
+        <img src={joiaPrata} alt="Joia prata com fundo azul" className="login-image" />
       </div>
       <div className="login-box">
-        <h1 className="login-title">Leilão Online de Carros</h1>
+        <h1 className="login-title">Leilão de Jóias</h1>
         {error && <p className="error">{error}</p>}
         <form onSubmit={handleSubmit}>
           <Input
-            label="Email"
+            label="E-mail"
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -68,26 +63,18 @@ const Login = () => {
             <button type="submit" className="login-button">
               Acessar
             </button>
-
-            <button
-              type="button"
-              className="cadastro-button"
-              onClick={handleCadastroClick}
-            >
-              Cadastre-se
-            </button>
           </div>
         </form>
 
         <div className="login-links-ntc">
-          <p>
+          
             Não tem conta? <a href="/cadastro">Cadastre-se aqui</a>
-          </p>
+          
         </div>
         <div className="login-links">
-          <p>
+          
             <a href="/recuperar">Recuperar senha</a>
-          </p>
+          
         </div>
       </div>
     </div>

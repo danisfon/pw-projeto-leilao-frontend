@@ -54,19 +54,13 @@ const Recuperar = () => {
               className="login-button cancel-button"
               onClick={() => navigate("/")}
             >
-              Cancelar
+              Voltar
             </button>
             <button type="submit" className="login-button">
               Enviar Link
             </button>
           </ButtonGroup>
         </form>
-
-        <div className="login-links">
-          <p>
-            <a href="/">Voltar para Login</a>
-          </p>
-        </div>
       </div>
     </div>
   );

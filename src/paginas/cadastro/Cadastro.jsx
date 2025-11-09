@@ -4,7 +4,7 @@ import { Input } from "../../components/Input"; // Ajuste o path conforme sua es
 import { useAuth } from "../../hooks/useAuth"; // Ajuste o path conforme sua estrutura
 import { useNavigate } from "react-router-dom";
 import ButtonGroup from "../../components/ButtonGroup"; // Ajuste o path conforme sua estrutura
-import carroLeilao from "../../assets/carro.png"; // Ajuste o path conforme sua estrutura
+import cadastrarImagem from "../../assets/cadastro.jpg"; // Ajuste o path conforme sua estrutura
 import "./cadastro.css"; // Importando o CSS específico para esta página
 
 const Cadastro = () => {
@@ -35,11 +35,11 @@ const Cadastro = () => {
 
   return (
     <div className="login-container">
-      <div className="login-image-wrapper">
-        <img src={carroLeilao} alt="Martelo de Leilão" className="login-image" />
+      <div className="login-image-wrapper-cadastro">
+        <img src={cadastrarImagem} alt="Imagem de prata com fundo azul" className="login-image" />
       </div>
 
-      <div className="login-box">
+      <div className="login-box-cadastro">
         <h1 className="login-title2">Cadastrar-se</h1>
         {error && <p className="error">{error}</p>}
         {success && <p className="success">{success}</p>}
@@ -71,7 +71,7 @@ const Cadastro = () => {
           
           <ButtonGroup>
             <button type="button" className="login-button" onClick={() => navigate("/")}>
-              Cancelar
+              Voltar
             </button>
             <button type="submit" className="login-button">
               Cadastrar

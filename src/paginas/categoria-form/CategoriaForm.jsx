@@ -1,9 +1,10 @@
+// src/pages/categoria-form/CategoriaForm.jsx
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import Sidebar from "../components/SideBar/SideBar";
-import CategoriaService from "../services/CategoriaService";
+import Sidebar from "../../components/SideBar/SideBar"; // Ajuste o path conforme sua estrutura
+import CategoriaService from "../../services/CategoriaService"; // Ajuste o path conforme sua estrutura
 import { toast } from "react-toastify";
-import "../css/categoriaForm.css";
+import "./categoria-form.css"; // Importando o CSS específico para esta página (já referenciado no original como "../css/categoriaForm.css")
 
 const CategoriaForm = () => {
   const navigate = useNavigate();

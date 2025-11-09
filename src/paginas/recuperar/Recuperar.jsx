@@ -1,8 +1,9 @@
+// src/pages/recuperar/Recuperar.jsx
 import React, { useState } from "react";
-import { Input } from "../components/Input";
+import { Input } from "../../components/Input"; // Ajuste o path conforme sua estrutura
 import { useNavigate } from "react-router-dom";
-import ButtonGroup from "../components/ButtonGroup";
-
+import ButtonGroup from "../../components/ButtonGroup"; // Ajuste o path conforme sua estrutura
+import "./recuperar.css"; // Importando o CSS específico para esta página
 
 const Recuperar = () => {
   const [email, setEmail] = useState("");

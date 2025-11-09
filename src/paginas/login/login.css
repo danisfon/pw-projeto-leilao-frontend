@@ -1,0 +1,139 @@
+/* src/pages/login/login.css */
+/* Estilos extraídos e adaptados do index.css original, apenas os relevantes para Login.jsx */
+/* Nota: Estilos globais como body e fonts devem ficar em um arquivo principal como src/index.css ou src/App.css */
+/* Estilos compartilhados (ex: .input, .button-group) podem ser movidos para um CSS de componentes se reutilizados em múltiplas páginas */
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; 
+  box-sizing: border-box; 
+}
+
+.login-image-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  height: 430px; 
+  max-width: 900px;
+  flex-shrink: 0; 
+}
+
+.login-image {
+  display: block;
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: inherit;
+}
+
+.login-box {
+  background-color: #d9d9d9;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 470px;
+  height: 430px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  box-sizing: border-box; 
+  flex-shrink: 0; 
+}
+
+.login-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+  color:#282829
+}
+
+.input-group {
+  margin-bottom: 15px; 
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 4px;
+  color: #122346;
+  font-size: 14px;
+}
+
+.input {
+  width: 100%; 
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #282829;
+  color: white;
+  border: 1px solid #282829; 
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1727b6; 
+  box-shadow: 0 0 0 3px rgba(23, 39, 182, 0.3); 
+}
+
+.button-group {
+  display: flex; 
+  justify-content: center; 
+  gap: 25px; 
+  margin-top: 20px; 
+  margin-bottom: 15px; 
+}
+
+.login-button,
+.cadastro-button {
+  width: 190px; 
+  padding: 11px;
+  background-color: #1c1d1c;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+ 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex-shrink: 0; 
+}
+
+.login-button:hover,
+.cadastro-button:hover {
+  background-color: #772a77; 
+  transform: translateY(-2px); 
+}
+
+.login-links {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.login-links-ntc {
+  text-align: right;
+  font-size: 14px;
+  margin-top: -20px;
+  color: #1727b6;
+}
+
+.login-links a {
+  color: #1c1c1d;
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #b11c1c;
+  font-size: 14px;
+  margin-bottom: 12px;
+  text-align: center; 
+}

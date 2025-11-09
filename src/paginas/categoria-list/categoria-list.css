@@ -1,0 +1,83 @@
+/* src/pages/categoria-list/categoria-list.css */
+/* Estilos relevantes para CategoriaList.jsx, extraídos e adaptados do index.css original */
+
+.categoria-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.categoria-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+}
+
+.categoria-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-add {
+  background-color: #1c1d1c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #772a77;
+}
+
+.categoria-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.categoria-table th, .categoria-table td {
+  padding: 10px;
+  border: 1px solid #282829;
+  text-align: left;
+}
+
+.categoria-table th {
+  background-color: #282829;
+}
+
+.no-data {
+  text-align: center;
+}
+
+.btn-edit {
+  background-color: #1c1d1c;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+  background-color: #772a77;
+}
+
+.btn-delete {
+  background-color: #b11c1c;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+  background-color: #d32f2f;
+}

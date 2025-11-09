@@ -1,9 +1,11 @@
+// src/pages/login/Login.jsx
 import React, { useState } from "react";
-import { Input } from "../components/Input";
+import { Input } from "../../components/Input"; // Ajuste o path conforme sua estrutura
 import { useNavigate } from "react-router-dom";
-import marteloLeilao from "../assets/leilao-martelo.png";
-import carroLeilao from "../assets/carro.png";
-import AutenticacaoService from "../services/AutenticacaoService";
+import marteloLeilao from "../../assets/leilao-martelo.png"; // Ajuste o path conforme sua estrutura
+import carroLeilao from "../../assets/carro.png"; // Ajuste o path conforme sua estrutura
+import AutenticacaoService from "../../services/AutenticacaoService"; // Ajuste o path conforme sua estrutura
+import "./login.css"; // Importando o CSS específico para esta página
 
 const Login = () => {
   const autenticacaoService = new AutenticacaoService();

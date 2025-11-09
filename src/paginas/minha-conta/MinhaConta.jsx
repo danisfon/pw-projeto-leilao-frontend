@@ -1,6 +1,7 @@
+// src/pages/minha-conta/MinhaConta.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../css/minhaconta.css"; 
+import "./minha-conta.css"; // Importando o CSS específico para esta página (já referenciado no original como "../css/minhaconta.css")
 
 const MinhaConta = () => {
   const [usuario, setUsuario] = useState(null);

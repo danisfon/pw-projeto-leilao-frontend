@@ -1,8 +1,8 @@
-
+// src/pages/admin-veiculos/AdminVeiculos.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../css/admin.css";
-import Sidebar from "../components/SideBar/SideBar"; // ✅ Import correto do componente
+import Sidebar from "../../components/SideBar/SideBar"; // Ajuste o path conforme sua estrutura
+import "./admin-veiculos.css"; // Importando o CSS específico para esta página (já referenciado no original como "../css/admin.css")
 
 const AdminVeiculos = () => {
   const [usuario, setUsuario] = useState(null);

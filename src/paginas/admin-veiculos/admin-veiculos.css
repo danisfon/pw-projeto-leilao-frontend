@@ -1,0 +1,32 @@
+/* src/pages/admin-veiculos/admin-veiculos.css */
+/* Estilos relevantes para AdminVeiculos.jsx, extraídos e adaptados do index.css original */
+
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+}
+
+.botaovoltar {
+  margin-bottom: 20px;
+}
+
+.botaovoltar button {
+  background-color: #1c1d1c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botaovoltar button:hover {
+  background-color: #772a77;
+}

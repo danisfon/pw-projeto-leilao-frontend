@@ -1,20 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./paginas/Login";
-import Cadastro from "./paginas/Cadastro";
-import Recuperar from "./paginas/Recuperar";
-import Leiloes from "./paginas/Leiloes";
+import Login from "./paginas/login/Login";
+import Cadastro from "./paginas/cadastro/Cadastro";
+import Recuperar from "./paginas/recuperar/Recuperar";
+import Leiloes from "./paginas/leiloes/Leiloes";
 import RotaPrivadaLayout from "./components/layout/RotaPrivadaLayout";
 import { fakeUsers } from "./data/usuarios";
-import MinhaConta from "./paginas/MinhaConta";
-import AdminVeiculos from "./paginas/AdminVeiculos";
+import MinhaConta from "./paginas/minha-conta/MinhaConta";
+import AdminVeiculos from "./paginas/admin-veiculos/AdminVeiculos";
 import GenericRegisterLeilao from "./GenericRegister/GenericRegister";
-
-
-
-// 🆕 Importando as páginas de Categoria
-import CategoriaList from "./paginas/CategoriaList";
-import CategoriaForm from "./paginas/CategoriaForm";
+import CategoriaList from "./paginas/categoria-list/CategoriaList";
+import CategoriaForm from "./paginas/categoria-form/CategoriaForm";
 
 if (!localStorage.getItem("fakeUsers")) {
   localStorage.setItem("fakeUsers", JSON.stringify(fakeUsers));
@@ -49,3 +45,4 @@ const App = () => {
 };
 
 export default App;
+ 

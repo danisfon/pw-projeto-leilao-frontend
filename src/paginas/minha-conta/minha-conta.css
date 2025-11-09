@@ -1,0 +1,76 @@
+/* src/pages/minha-conta/minha-conta.css */
+/* Estilos relevantes para MinhaConta.jsx, extraídos e adaptados do index.css original */
+/* Nota: Como o original referencia "../css/minhaconta.css", assumi que os estilos estão no index.css ou separados; extraí os relevantes */
+
+.minha-conta-page {
+  /* Adicione estilos específicos se definidos no index.css; caso contrário, ajuste conforme necessário */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+}
+
+.botaovoltar {
+  width: 100%;
+  max-width: 800px; /* Ajuste conforme layout */
+  margin-bottom: 20px;
+}
+
+.botaovoltar button {
+  background-color: #1c1d1c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botaovoltar button:hover {
+  background-color: #772a77;
+}
+
+.minha-conta-container {
+  background-color: #d9d9d9;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 470px;
+  color: #282829;
+}
+
+.minha-conta-container h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.usuario-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.conta-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.conta-actions button {
+  padding: 10px 20px;
+  background-color: #1c1d1c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.conta-actions button:hover {
+  background-color: #772a77;
+}

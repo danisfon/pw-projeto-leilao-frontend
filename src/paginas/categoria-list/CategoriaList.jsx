@@ -1,9 +1,10 @@
+// src/pages/categoria-list/CategoriaList.jsx
 import React, { useEffect, useState } from "react";
-import CategoriaService from "../services/CategoriaService";
+import CategoriaService from "../../services/CategoriaService"; // Ajuste o path conforme sua estrutura
 import { useNavigate } from "react-router-dom";
-import Sidebar from "../components/SideBar/SideBar";
+import Sidebar from "../../components/SideBar/SideBar"; // Ajuste o path conforme sua estrutura
 import { toast } from "react-toastify";
-import "../css/categoriaList.css";
+import "./categoria-list.css"; // Importando o CSS específico para esta página (já referenciado no original como "../css/categoriaList.css")
 
 const CategoriaList = () => {
   const [categorias, setCategorias] = useState([]);

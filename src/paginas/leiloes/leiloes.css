@@ -1,0 +1,204 @@
+/* src/pages/leiloes/leiloes.css */
+/* Estilos relevantes para Leiloes.jsx, extraídos e adaptados do index.css original */
+/* Inclui estilos para header, filtros, lista, whatsapp, dropdown, etc. */
+
+.leiloes-container {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+  padding: 20px;
+}
+
+.leiloes-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 25px 200px 10px 200px;
+  z-index: 2;
+}
+
+.leiloes-header h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #ff0080, #f700ff, #ffff00, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-shadow: 0 0 30px rgba(255, 0, 128, 0.5);
+}
+
+.logout-button {
+  position: static;
+  right: 50px;
+  top: 10%;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, #ff0080, #ff8c00);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  transform: translateY(-50%) scale(1.05);
+  background: linear-gradient(90deg, #ff008c, #ffa100);
+  box-shadow: 0 0 30px rgba(255, 0, 128, 0.8);
+}
+
+.dropdown {
+  position: absolute;
+  right: -150px;
+  top: 70%;
+  transform: translateY(-50%);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 0px;
+  background-color: #1f1f2e;
+  min-width: 150px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  z-index: 10;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dropdown-content button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dropdown-content button:hover {
+  background: #772a77;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filtros input, .filtros select {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #282829;
+  color: white;
+  border: 1px solid #282829;
+  flex: 1;
+}
+
+.leiloes-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.leilao-card {
+  background-color: #282829;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.leilao-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.leilao-card button {
+  background-color: #1c1d1c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.leilao-card button:hover {
+  background-color: #772a77;
+}
+
+.sem-resultados {
+  text-align: center;
+  font-size: 18px;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button img {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Media queries para mobile */
+@media (max-width: 768px) {
+  .leiloes-header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .logout-button {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .dropdown {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    margin-top: 5px;
+    flex-direction: column;
+  }
+}

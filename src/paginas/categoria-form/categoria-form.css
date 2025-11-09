@@ -1,0 +1,74 @@
+/* src/pages/categoria-form/categoria-form.css */
+/* Estilos relevantes para CategoriaForm.jsx, extraídos e adaptados do index.css original */
+/* Como o original tem "../css/categoriaForm.css", extraí classes como .categoria-form-container, etc. */
+
+.categoria-form-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.categoria-form-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+}
+
+.categoria-form-btn-voltar {
+  background-color: #1c1d1c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.categoria-form-btn-voltar:hover {
+  background-color: #772a77;
+}
+
+.categoria-form-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.categoria-form-generic-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.categoria-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoria-form-field label {
+  color: #d9d9d9;
+  margin-bottom: 5px;
+}
+
+.categoria-form-field input {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #282829;
+  color: white;
+  border: 1px solid #282829;
+}
+
+.categoria-form-btn-save {
+  background-color: #1c1d1c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.categoria-form-btn-save:hover {
+  background-color: #772a77;
+}

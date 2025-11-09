@@ -1,8 +1,10 @@
-import whats from "../assets/whatsapp.jpg";
-import mockLeiloes from "../mocks/mockLeiloes";
+// src/pages/leiloes/Leiloes.jsx
+import whats from "../../assets/whatsapp.jpg"; // Ajuste o path conforme sua estrutura
+import mockLeiloes from "../../mocks/mockLeiloes"; // Ajuste o path conforme sua estrutura
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./leiloes.css"; // Importando o CSS específico para esta página
 
 const Leiloes = () => {
   const [leiloes, setLeiloes] = useState([]);
@@ -145,7 +147,7 @@ const Leiloes = () => {
         )}
       </div>
       <a
-        href="https://wa.me/5544998705279"
+        href="https://wa.me/5544991254785"
         className="whatsapp-button"
         target="_blank"
         rel="noopener noreferrer"

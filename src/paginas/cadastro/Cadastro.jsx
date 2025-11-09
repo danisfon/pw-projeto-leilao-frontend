@@ -1,9 +1,11 @@
+// src/pages/cadastro/Cadastro.jsx
 import React, { useState } from "react";
-import { Input } from "../components/Input";
-import { useAuth } from "../hooks/useAuth";
+import { Input } from "../../components/Input"; // Ajuste o path conforme sua estrutura
+import { useAuth } from "../../hooks/useAuth"; // Ajuste o path conforme sua estrutura
 import { useNavigate } from "react-router-dom";
-import ButtonGroup from "../components/ButtonGroup";
-import carroLeilao from "../assets/carro.png";
+import ButtonGroup from "../../components/ButtonGroup"; // Ajuste o path conforme sua estrutura
+import carroLeilao from "../../assets/carro.png"; // Ajuste o path conforme sua estrutura
+import "./cadastro.css"; // Importando o CSS específico para esta página
 
 const Cadastro = () => {
   const [name, setName] = useState("");
